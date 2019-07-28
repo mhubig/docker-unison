@@ -17,5 +17,5 @@ RUN set -ex; \
   make
 
 FROM alpine:3.10
-COPY --from=builder /usr/src/unison/src/unison* /usr/local/bin/
+COPY --from=builder /usr/src/unison/src/unison /usr/src/unison/src/unison-fsmonitor /usr/local/bin/
 CMD ["unison", "-doc", "about"]
